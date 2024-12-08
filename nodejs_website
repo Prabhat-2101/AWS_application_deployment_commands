@@ -1,0 +1,20 @@
+Deployment of NodeJS web application:
+		a. Launch amazonlinux ec2 instance.
+		b. Connect to the instance using pem key or instance connect.
+		c. Now follow up the commands:
+			- Sudo su -
+			- yum update -y
+			- curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash   
+			- chmod 777 ~/.nvm/nvm.sh
+			- ~/.nvm/nvm.sh
+			- source .nvm/nvm.sh
+			- nvm install node   
+			- yum install git unzip
+			- wget https://www.github.com/Prabhat-2101/My_Portfolio_Using_NodeJS/archive/refs/heads/master.zip
+			- yum install unzip
+			- unzip master.zip 
+			- cd My_Portfolio_Using_NodeJS-master
+			- npm i
+			- npm start
+		d. If not accessible then go to the security group of the instance and add inbound traffic and outbound traffic rule for http and https (anywhere). Also allow the custom TCP for allowing port number based on your env port.
+Now your NodeJs application is deployed on public ip of ec2 instance. If you gets any
