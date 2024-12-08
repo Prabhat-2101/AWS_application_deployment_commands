@@ -1,0 +1,17 @@
+Deployment of static HTML website:
+		a. Launch amazonlinux ec2 instance.
+		b. Connect to the instance using pem key or instance connect.
+		c. Now follow up the commands:
+			- sudo su -
+			- yum update -y
+			- yum install httpd
+			- systemctl start httpd
+		** check whether the public ip of instance is accessible **
+		If not accessible then go to the security group of the instance and add inbound traffic and outbound traffic rule for http and https (anywhere).
+			- wget your_repository_url/archive/refs/heads/repository_branch_name.zip
+			- yum install unzip
+			- unzip master.zip
+			- cd folder_name/master
+			- mv* /var/www/html
+			- systemctl restart httpd
+Now your application is deployed on public ip of instance.
